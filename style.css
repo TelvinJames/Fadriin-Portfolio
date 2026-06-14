@@ -177,10 +177,17 @@ section h2::after {
     border-left: 3px solid var(--primary);
     opacity: 1;
 }
+
+.sidebar * {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+}
+
 .sidebar.open {
     right: 0;
     pointer-events: all;
     visibility: visible;
+    background: #ffffff !important;
     box-shadow: -8px 0 40px rgba(0,0,0,0.25);
 }
 
