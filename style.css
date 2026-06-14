@@ -81,6 +81,7 @@ section h2::after {
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
 .show {
     opacity: 1;
     transform: translateY(0);
