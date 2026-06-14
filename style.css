@@ -162,33 +162,58 @@ section h2::after {
 .sidebar {
     display: flex;
     position: fixed;
-    top: 0; right: -260px;
-    width: 220px;
-    max-width: 65vw;
+    top: 0; right: -210px;
+    width: 190px;
+    max-width: 50vw;
     height: 100%;
-    background: #ffffff;
-    box-shadow: -6px 0 32px rgba(0,0,0,0.18);
+    background: #ffffff !important;
+    box-shadow: -6px 0 32px rgba(0,0,0,0.30);
     z-index: 2000;
-    padding: 24px 20px;
+    padding: 20px 16px;
     transition: right 0.35s ease;
     flex-direction: column;
     pointer-events: none;
     visibility: hidden;
     border-left: 3px solid var(--primary);
+    opacity: 1;
 }
 .sidebar.open {
     right: 0;
     pointer-events: all;
     visibility: visible;
+    box-shadow: -8px 0 40px rgba(0,0,0,0.25);
 }
 
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #EEF2FF;
+}
+.sidebar-logo {
+    color: var(--primary);
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
 .sidebar-close {
-    align-self: flex-end;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--text-light);
     cursor: pointer;
-    margin-bottom: 30px;
     transition: color 0.2s;
+    background: #F1F5F9;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.sidebar-close:hover {
+    color: var(--primary);
+    background: var(--bg-blue-soft);
 }
 .sidebar-close:hover { color: var(--primary); }
 .sidebar-links {
@@ -217,7 +242,7 @@ section h2::after {
     display: block;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.55);
     z-index: 1500;
     opacity: 0;
     pointer-events: none;
@@ -359,6 +384,7 @@ section h2::after {
     animation: slideRight 0.9s ease forwards, floating 4s ease-in-out 1s infinite;
     position: relative;
     z-index: 1;
+    will-change: transform;
 }
 
 /* Glow synced to floating animation */
