@@ -66,11 +66,15 @@ window.addEventListener("scroll", () => {
 
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("show");
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            revealObserver.unobserve(entry.target); // animate once only
+        }
     });
 }, { threshold: 0.15 });
 
 sections.forEach(section => {
+    if (section.id === "home") return; // home is visible immediately, skip reveal animation
     section.classList.add("hidden");
     revealObserver.observe(section);
 });

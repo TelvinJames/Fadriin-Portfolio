@@ -331,6 +331,8 @@ section h2::after {
     font-weight: 600;
     opacity: 0;
     animation: slideLeft 0.9s ease 0.25s forwards;
+    min-height: 2.4rem;
+    display: block;
 }
 .home-content p {
     max-width: 520px;
@@ -873,7 +875,11 @@ footer p  { font-size: 0.85rem; color: #94A3B8; }
         gap: 2rem;
     }
     .home-content h1 { font-size: 2.8rem; }
-    .home-content h2 { text-align: center; }
+    .home-content h2 {
+        text-align: center;
+        font-size: 1.4rem;
+        min-height: 1.2em;
+    }
     .home-content p  { margin: 0 auto; }
     .home-image img  { width: 260px; height: 300px; }
     .image-glow      { width: 270px; height: 270px; }
